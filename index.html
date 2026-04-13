@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapre Industries | R&D Project Log</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        labBlack: '#050505',
+                        labDark: '#111111',
+                        labGray: '#1f1f1f',
+                        gold: {
+                            light: '#FDE047',
+                            DEFAULT: '#D4AF37', 
+                            dark: '#B8860B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Courier New', 'Courier', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #050505; }
+        
+        /* Gold text gradient */
+        .gold-gradient {
+            background: linear-gradient(to right, #FDE047, #D4AF37, #B8860B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Lab Interface Panel Styling */
+        .panel {
+            background: rgba(17, 17, 17, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .panel:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Subtle grid background for the lab vibe */
+        .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="text-gray-300 font-sans antialiased bg-grid min-h-screen selection:bg-gold selection:text-black">
+
+    <header class="fixed w-full top-0 z-50 bg-labBlack/90 border-b border-gold/20 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="sapre-logo.jpg" alt="Sapre Industries Core Logo" class="h-10 w-10 object-cover rounded-full border border-gold/50 shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                <span class="font-black text-xl tracking-[0.2em] text-white hidden sm:block">SAPRE <span class="text-gold">INDUSTRIES</span></span>
+            </div>
+            <div class="hidden md:flex gap-6 font-mono text-xs text-gold/70 tracking-widest">
+                <span>STATUS: <span class="text-green-500 animate-pulse">ONLINE</span></span>
+                <span>SYSTEM: <span class="text-white">SECURE</span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-black mb-4 tracking-tight text-white uppercase">
+                R&D Project <span class="gold-gradient">Portfolio</span>
+            </h1>
+            <p class="text-xl text-gold/80 font-mono tracking-widest uppercase mb-8">
+                Innovation • Engineering • Smart Systems
+            </p>
+            <p class="max-w-3xl mx-auto text-gray-400 text-lg leading-relaxed">
+                Sapre Industries develops experimental prototypes combining electronics, advanced AI systems, smart devices, and next-generation web technologies. This log documents all active and completed technical deployments.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mb-20">
+            <div class="panel rounded-xl p-6 flex flex-col items-center text-center group transition-all duration-300">
+                <i class="fa-solid fa-user-gear text-4xl text-gold mb-4 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-1">Founder & Lead Engineer</h3>
+                <p class="text-2xl font-bold text-white uppercase tracking-wider">Manas Sapre</p>
+            </div>
+            
+            <div class="panel rounded-xl p-6 flex flex-col items-center text-center group transition-all duration-300 border-gold/40 shadow-[0_0_20px_rgba(212,175,55,0.1)]">
+                <i class="fa-solid fa-server text-4xl text-gold mb-4 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-1">Core Architecture</h3>
+                <p class="text-2xl font-bold text-white uppercase tracking-wider">Nexus Prime</p>
+            </div>
+
+            <div class="panel rounded-xl p-6 flex flex-col items-center text-center group transition-all duration-300">
+                <i class="fa-solid fa-microchip text-4xl text-gold mb-4 group-hover:scale-110 transition-transform"></i>
+                <h3 class="text-xs font-mono text-gray-500 tracking-widest uppercase mb-1">AI Assistant System</h3>
+                <p class="text-2xl font-bold text-white uppercase tracking-wider">JARVIS</p>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-10 border-b border-gray-800 pb-4">
+            <i class="fa-solid fa-folder-tree text-gold text-2xl"></i>
+            <h2 class="text-3xl font-bold text-white uppercase tracking-wider">Official Project Log</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            
+            <article class="panel rounded-2xl overflow-hidden relative transition-all duration-300">
+                <div class="absolute top-4 right-4 bg-green-500/10 border border-green-500/30 text-green-400 font-mono text-xs px-3 py-1 rounded-full flex items-center gap-2 z-10">
+                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                    DEPLOYED
+                </div>
+
+                <div class="p-8 border-b border-gray-800 bg-labDark">
+                    <span class="text-gold font-mono text-sm tracking-widest font-bold block mb-2">PROJECT #001</span>
+                    <h3 class="text-2xl font-bold text-white leading-tight mb-2">Piezo Electric Power Generation Model</h3>
+                    <span class="inline-block px-2 py-1 bg-labGray text-gray-300 text-xs font-mono rounded border border-gray-700">Category: Renewable Energy Prototype</span>
+                </div>
+
+                <div class="p-8">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 border-l-2 border-gold pl-4">
+                        <strong class="text-white block mb-1">Description:</strong>
+                        A demonstration model that converts mechanical pressure into electrical energy using piezoelectric sensors. Designed as a functional school demonstration model to prove the viability of kinetic energy harvesting.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-white font-bold mb-3 text-sm uppercase tracking-wider"><i class="fa-solid fa-list-check text-gold mr-2"></i> Core Features</h4>
+                            <ul class="space-y-2">
+                                <li class="text-sm text-gray-400 flex items-start gap-2"><i class="fa-solid fa-angle-right text-gold mt-1 text-xs"></i> Piezoelectric power generation</li>
+                                <li class="text-sm text-gray-400 flex items-start gap-2"><i class="fa-solid fa-angle-right text-gold mt-1 text-xs"></i> Pressure simulation via touch</li>
+                                <li class="text-sm text-gray-400 flex items-start gap-2"><i class="fa-solid fa-angle-right text-gold mt-1 text-xs"></i> LED indicator system</li>
+                                <li class="text-sm text-gray-400 flex items-start gap-2"><i class="fa-solid fa-angle-right text-gold mt-1 text-xs"></i> Digital voltage display</li>
+                                <li class="text-sm text-gray-400 flex items-start gap-2"><i class="fa-solid fa-angle-right text-gold mt-1 text-xs"></i> 30×35 cm custom board</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-white font-bold mb-3 text-sm uppercase tracking-wider"><i class="fa-solid fa-microchip text-gold mr-2"></i> Tech Specs</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gold/10 border border-gold/20 text-gold rounded-full text-xs font-mono">Piezo Sensors</span>
+                                <span class="px-3 py-1 bg-gold/10 border border-gold/20 text-gold rounded-full text-xs font-mono">LED Array</span>
+                                <span class="px-3 py-1 bg-gold/10 border border-gold/20 text-gold rounded-full text-xs font-mono">Voltage Display</span>
+                                <span class="px-3 py-1 bg-gold/10 border border-gold/20 text-gold rounded-full text-xs font-mono">Circuit Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <section id="contact-terminal" class="border-t border-gold/20 bg-labDark py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-satellite-dish text-4xl text-gold mb-6 animate-pulse"></i>
+            <h2 class="text-2xl font-bold text-white mb-4 uppercase tracking-wider">Establish Connection</h2>
+            <p class="text-gray-400 mb-10 font-mono text-sm uppercase tracking-widest">Select Direct Transmission Channel</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="mailto:sapreindustriesltd@gmail.com" class="group relative panel px-8 py-6 rounded-xl flex flex-col items-center border border-gold/30 hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all duration-300 w-full sm:w-64">
+                    <i class="fa-solid fa-envelope text-3xl text-gold mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-white font-bold tracking-wider uppercase mb-1">Direct Email</span>
+                    <span class="text-gray-500 font-mono text-xs truncate w-full text-center">sapreindustriesltd</span>
+                </a>
+
+                <a href="https://www.instagram.com/techboiii_goa1429/" target="_blank" class="group relative panel px-8 py-6 rounded-xl flex flex-col items-center border border-gold/30 hover:border-gold hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all duration-300 w-full sm:w-64">
+                    <i class="fa-brands fa-instagram text-3xl text-gold mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-white font-bold tracking-wider uppercase mb-1">System Uplink</span>
+                    <span class="text-gray-500 font-mono text-xs truncate w-full text-center">@techboiii_goa1429</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-labBlack border-t border-gray-900 py-6 text-center">
+        <p class="text-gray-600 text-xs font-mono uppercase tracking-widest">
+            © 2026 Sapre Industries. Core System: <span class="text-gold">NEXUS PRIME</span>.
+        </p>
+    </footer>
+
+</body>
+</html>
